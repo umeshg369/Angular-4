@@ -1,0 +1,14 @@
+#form{
+	margin-top: 50px; 
+}
+.container{
+	padding-top: 80px;
+	position: relative;
+}
+.alert{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	text-align: center;
+}

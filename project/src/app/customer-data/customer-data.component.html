@@ -1,0 +1,24 @@
+<div class="container">
+	<table class="table table-striped table-bordered">
+		<tr>
+		    <th class="text-center">Sr. No.</th>
+		    <th class="text-center">Name</th>
+		    <th class="text-center">Email Id</th>
+		    <th class="text-center">Mobile No.</th>
+		    <th class="text-center">Edit</th>
+		    <th class="text-center">Delete</th>
+	  	</tr>
+		<tr *ngFor="let a of customerList; let i = index">
+			<td class="text-center">{{i + 1}}</td>
+			<td class="text-center">{{a.name}}</td>
+			<td class="text-center">{{a.email}}</td>
+			<td class="text-center">{{a.mobile}}</td>
+			<td class="actions text-center" data-th="">
+				<button type="submit" class="btn btn-info btn-sm" routerLink="/update-customer/{{a.id}}"><i class="fa fa-edit"></i></button>								
+			</td>
+			<td class="actions text-center" data-th="">
+				<button type="submit" class="btn btn-danger btn-sm" (click)="deleteCustomer(a.id)"><i class="fa fa-trash-o"></i></button>	
+			</td>
+		</tr>
+	</table>
+</div>

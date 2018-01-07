@@ -1,0 +1,37 @@
+<section id="form"><!--form-->
+	<div class="container">
+		<div class="alert alert-success" *ngIf="addedMsg">
+		  <p><strong>Success!</strong> Customer added.</p>
+		</div>
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-1">
+				<div class="login-form"><!--login form-->
+					<h2>Login to your account</h2>
+					<form>
+						<input type="text" placeholder="Name" />
+						<input type="email" placeholder="Email Address" />
+						<span>
+							<input type="checkbox" class="checkbox"> 
+							Keep me signed in
+						</span>
+						<button type="submit" class="btn btn-default">Login</button>
+					</form>
+				</div><!--/login form-->
+			</div>
+			<div class="col-sm-1">
+				<h2 class="or">OR</h2>
+			</div>
+			<div class="col-sm-4">
+				<div class="signup-form"><!--sign up form-->
+					<h2>New User Signup!</h2>
+					<form #newCustomer="ngForm" (ngSubmit)="onSubmit(newCustomer.value)">
+						<input type="text" required placeholder="Name" ngModel name="name" />
+						<input type="email" required placeholder="Email Address" ngModel name="email" />
+						<input type="tel" required placeholder="Mobile No." ngModel name="mobile" />
+						<button type="submit" [disabled]="!newCustomer.form.valid" class="btn btn-warning">Signup</button>
+					</form>
+				</div><!--/sign up form-->
+			</div>
+		</div>
+	</div>
+</section><!--/form-->

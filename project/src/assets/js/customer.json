@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Umesh",
+      "email": "umesh@umesh.com",
+      "mobile": "12345"
+    },
+    {
+      "id": 2,
+      "name": "Pawan",
+      "email": "pawan@pawan.com",
+      "mobile": "123456"
+    },
+    {
+      "id": 3,
+      "name": "Kishan",
+      "email": "kishan@kishan.com",
+      "mobile": "1234"
+    },
+    {
+      "name": "xgb",
+      "email": "bbbcb",
+      "mobile": "bvbvb",
+      "id": 4
+    },
+    {
+      "name": ",...",
+      "email": ".,..",
+      "mobile": ".m.",
+      "id": 5
+    },
+    {
+      "name": "Signup",
+      "email": "gfg",
+      "mobile": "ggfg",
+      "id": 6
+    },
+    {
+      "name": "tyytyyy",
+      "email": "yty",
+      "mobile": "ytytyy",
+      "id": 7
+    }
+  ]
+}
