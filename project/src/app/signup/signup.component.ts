@@ -14,7 +14,7 @@ export class SignupComponent implements OnInit {
   addedMsg:boolean = false;
 
   onSubmit = function(val){
-    ajax.post('http://localhost:3000/posts',val).subscribe();
+    this.ajax.post('http://localhost:3000/posts',val).subscribe();
     this.addedMsg = false;
     setTimeout(() => {
       this.addedMsg = true;

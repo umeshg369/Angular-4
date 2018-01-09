@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Headres, Response } from '@angular/http';
+import { Http, Headers, Response } from '@angular/http';
 
 @Component({
   selector: 'app-customer-data',
@@ -16,16 +16,19 @@ export class CustomerDataComponent implements OnInit {
 
   showCustomers = function() {
 		//console.log(this.ajax);
-    ajax.get('http://localhost:3000/posts').subscribe((res:Response) => 
+    this.ajax.get('http://localhost:3000/posts').subscribe((res:Response) => {
       this.customerList = res.json();
-    );
+    });
 	}
 
   deleteCustomer = function(id) {
     //console.log(id);
     const url = `${'http://localhost:3000/posts'}/${id}`;
     console.log(url);
-    ajax.delete(url).subscribe();
+    this.ajax.delete(url).subscribe(
+      ()=>{
+        this.showCustomers();
+    });
   }
 
   ngOnInit() {
